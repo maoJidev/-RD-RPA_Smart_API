@@ -1,3 +1,4 @@
+#tasks.py
 from robocorp.tasks import task
 from robocorp.browser import browser
 
@@ -7,6 +8,8 @@ from collect_month_document_urls import run_collect_month_urls
 from read_document_content import run_read_document_content
 from filter_documents import run_filter_documents
 
+
+# run python -m robocorp.tasks run tasks.py -t (nameTask)
 
 @task
 def run_year():
