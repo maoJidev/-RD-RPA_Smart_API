@@ -1,4 +1,3 @@
-# tasks.py
 from robocorp.tasks import task
 from robocorp.browser import browser
 import json
@@ -14,47 +13,48 @@ from src.scrapers.document_reader import run_read_document_content
 from src.utils.document_filter import run_filter_documents
 from src.utils.cleanup import clean_logs
 
-# To run a task use: python -m robocorp.tasks run tasks.py -t <TaskName>
 
 @task
 def run_year():
     with browser() as b:
         page = b.new_page()
-        print("📌 Stage 1: เก็บปี")
+        print("[INFO] Stage 1: Collect years")
         collect_years(page)
+
 
 @task
 def run_month():
-    with browser() as b: 
+    with browser() as b:
         page = b.new_page()
-        print("📌 Stage 2: เก็บเดือน")
+        print("[INFO] Stage 2: Collect months")
         collect_months(page)
+
 
 @task
 def run_collect_month_urls_task():
     with browser() as b:
         page = b.new_page()
-        print("📌 Stage 3: เก็บลิงก์เอกสารจากเดือน")
+        print("[INFO] Stage 3: Collect document URLs")
         run_collect_month_urls(page)
+
 
 @task
 def run_read_document_content_task():
     with browser() as b:
         page = b.new_page()
-        print("📌 Stage 4: อ่านเนื้อหาเอกสาร")
+        print("[INFO] Stage 4: Read document contents")
         run_read_document_content(page)
+
 
 @task
 def run_filter_documents_task():
-    print("📌 Stage 5: กรองข้อมูลที่สมบูรณ์")
+    print("[INFO] Stage 5: Filter valid documents")
     run_filter_documents()
+
 
 @task
 def run_filter_documents_by_title_task():
-    """
-    Task: กรองเอกสารตาม title keyword
-    """
-    print("📌 Stage 6: กรองเอกสารตาม title keyword")
+    print("[INFO] Stage 6: Filter documents by title keyword")
 
     input_file = FILE_PATHS["month_document_contents_filtered"]
     with open(input_file, "r", encoding="utf-8") as f:
@@ -68,26 +68,26 @@ def run_filter_documents_by_title_task():
                 "content": doc.get("แนววินิจฉัย", "")
             })
 
-    # กำหนด keyword หลัก ๆ ที่สนใจ
     target_keywords = ["ภาษีมูลค่าเพิ่ม", "อาหารสัตว์"]
-
     filtered_documents = filter_documents_by_keywords(documents, target_keywords)
-    print(f"   🔎 เอกสารหลังกรอง: {len(filtered_documents)} เรื่อง")
+
+    if filtered_documents:
+        print(f"[OK] Filtered {len(filtered_documents)} documents")
+    else:
+        print("[NOT_OK] No documents matched keywords")
 
     output_file = FILE_PATHS["month_document_urls_filtered"]
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(filtered_documents, f, ensure_ascii=False, indent=2)
 
-    print(f"💾 บันทึกไฟล์ filtered เรียบร้อย: {output_file}")
+    print(f"[OK] Output saved -> {output_file}")
+
 
 @task
 def run_summarize_filtered_documents_task():
-    """
-    Task: สรุปเอกสารหลังกรอง title keyword
-    """
-    print("📌 Stage 7: สรุปเอกสารหลังกรอง")
-    input_file = FILE_PATHS["month_document_urls_filtered"]
+    print("[INFO] Stage 7: Summarize filtered documents")
 
+    input_file = FILE_PATHS["month_document_urls_filtered"]
     with open(input_file, "r", encoding="utf-8") as f:
         documents = json.load(f)
 
@@ -97,11 +97,11 @@ def run_summarize_filtered_documents_task():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(summaries, f, ensure_ascii=False, indent=2)
 
-    print(f"💾 บันทึกไฟล์ summary เรียบร้อย: {output_file}")
+    print(f"[OK] Summary saved -> {output_file}")
+
 
 @task
 def run_cleanup():
-    """
-    Task: ลบไฟล์ขยะ (logs) ในโฟลเดอร์ output
-    """
+    print("[INFO] Stage 8: Cleanup logs")
     clean_logs()
+    print("[OK] Cleanup completed")

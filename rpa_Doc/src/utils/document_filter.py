@@ -19,7 +19,7 @@ def is_valid_document(doc):
 def run_filter_documents():
     """อ่านไฟล์ JSON และคัดกรองเฉพาะข้อมูลที่สมบูรณ์"""
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ ไม่พบไฟล์ {INPUT_FILE}")
+        print(f"ไม่พบไฟล์ {INPUT_FILE}")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
@@ -31,7 +31,7 @@ def run_filter_documents():
     total_docs_after = 0
     total_docs_removed = 0
 
-    print("\n📊 เริ่มกระบวนการกรองข้อมูลเอกสาร")
+    print("\nเริ่มกระบวนการกรองข้อมูลเอกสาร")
     print("=" * 60)
 
     for month_data in data:
@@ -45,7 +45,7 @@ def run_filter_documents():
         total_docs_after += len(valid_docs)
         total_docs_removed += removed_count
 
-        print(f"📅 {year} {month} | ทั้งหมด: {len(original_docs)} | ผ่าน: {len(valid_docs)} | ถูกตัด: {removed_count}")
+        print(f"{year} {month} | ทั้งหมด: {len(original_docs)} | ผ่าน: {len(valid_docs)} | ถูกตัด: {removed_count}")
 
         if valid_docs:
             new_month_data = month_data.copy()
@@ -60,12 +60,12 @@ def run_filter_documents():
         json.dump(filtered_results, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 60)
-    print("🎉 สรุปผลการกรองข้อมูล")
+    print("สรุปผลการกรองข้อมูล")
     print("=" * 60)
-    print(f"📁 ไฟล์ต้นฉบับ        : {INPUT_FILE}")
-    print(f"📁 ไฟล์ผลลัพธ์        : {OUTPUT_FILE}")
-    print(f"✅ เอกสารที่ผ่านกรอง   : {total_docs_after}")
-    print(f"❌ เอกสารถูกตัดออก     : {total_docs_removed}")
+    print(f"ไฟล์ต้นฉบับ        : {INPUT_FILE}")
+    print(f"ไฟล์ผลลัพธ์        : {OUTPUT_FILE}")
+    print(f"เอกสารที่ผ่านกรอง   : {total_docs_after}")
+    print(f"เอกสารถูกตัดออก     : {total_docs_removed}")
     print("=" * 60)
 
 if __name__ == "__main__":
