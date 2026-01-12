@@ -1,0 +1,77 @@
+INFO:     127.0.0.1:57087 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57087 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57091 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57091 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61292 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61292 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61519 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61519 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61522 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61591 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61638 - "GET /rag/history HTTP/1.1" 200 OK
+INFO:     10.208.2.60:61686 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:62115 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:62526 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:63393 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:64796 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55886 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55902 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55958 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56137 - "POST /rag/ask HTTP/1.1" 422 Unprocessable Entity
+INFO:     10.208.2.60:56147 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:59737 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:59854 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:59993 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:59212 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:60448 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:60591 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:64449 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:54398 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55007 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55272 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55951 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:55951 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55854 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55857 - "GET /ready HTTP/1.1" 200 OK
+OLLAMA URL = http://10.208.5.20:11434/api/generate
+OLLAMA URL = http://10.208.5.20:11434/api/generate
+OLLAMA URL = http://10.208.5.20:11434/api/generate
+INFO:     10.208.2.60:56260 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56260 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56269 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56269 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56242 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:56666 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56666 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56764 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:56803 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:56825 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56917 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56917 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56935 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56935 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56941 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56941 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56973 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:56973 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:57013 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:57013 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:57022 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:57134 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:57197 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:57352 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:58047 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.208.2.60:58047 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.208.2.60:58058 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:54791 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:62364 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:62932 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:63000 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:55495 - "POST /rag/ask HTTP/1.1" 500 Internal Server Error
+INFO:     10.208.2.60:56060 - "POST /rag/ask HTTP/1.1" 503 Service Unavailable
+INFO:     10.208.2.60:51876 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:52025 - "POST /rag/ask HTTP/1.1" 503 Service Unavailable
+INFO:     10.208.2.60:53549 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:50581 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.2.60:51175 - "POST /rag/ask HTTP/1.1" 200 OK
+INFO:     10.208.1.207:50529 - "POST /rag/ask HTTP/1.1" 200 OK

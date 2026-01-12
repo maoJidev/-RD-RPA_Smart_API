@@ -1,0 +1,365 @@
+2026-01-09 11:27:47,629 | INFO | uvicorn.error | Started server process [3040]
+2026-01-09 11:27:47,629 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 11:27:47,629 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 11:27:47,629 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 11:28:03,031 | INFO | uvicorn.error | Shutting down
+2026-01-09 11:28:03,132 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 11:28:03,132 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 11:28:03,132 | INFO | uvicorn.error | Finished server process [3040]
+2026-01-09 11:28:11,154 | INFO | uvicorn.error | Started server process [3776]
+2026-01-09 11:28:11,154 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 11:28:11,154 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 11:28:11,154 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 11:28:16,934 | INFO | uvicorn.error | Shutting down
+2026-01-09 11:28:17,044 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 11:28:17,044 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 11:28:17,044 | INFO | uvicorn.error | Finished server process [3776]
+2026-01-09 11:28:19,498 | INFO | uvicorn.error | Started server process [8956]
+2026-01-09 11:28:19,498 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 11:28:19,498 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 11:28:19,498 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 11:28:24,497 | INFO | rag | Ollama worker processing request
+2026-01-09 11:32:06,360 | INFO | uvicorn.access | 10.208.2.60:62932 - "POST /rag/ask HTTP/1.1" 500
+2026-01-09 11:32:06,360 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 42, in submit
+    return result_q.get(timeout=190)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 18, in ask_question
+    answer = rag_service.ask_question(request.question)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 123, in ask_question
+    answer = self._call_ollama(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 164, in _call_ollama
+    result = self.ollama_queue.submit(_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 44, in submit
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 503: ระบบไม่สามารถประมวลผลได้ภายในเวลาที่กำหนด
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 32, in ask_question
+    logger.error(f"Router error: {e}")
+    ^^^^^^^^^^^^
+AttributeError: module 'fastapi.logger' has no attribute 'error'
+2026-01-09 11:33:24,741 | ERROR | rag | Ollama error: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300)
+2026-01-09 11:33:24,741 | INFO | rag | Ollama worker processing request
+2026-01-09 11:35:20,834 | INFO | uvicorn.access | 10.208.2.60:63000 - "POST /rag/ask HTTP/1.1" 500
+2026-01-09 11:35:20,834 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 42, in submit
+    return result_q.get(timeout=190)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 18, in ask_question
+    answer = rag_service.ask_question(request.question)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 123, in ask_question
+    answer = self._call_ollama(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 164, in _call_ollama
+    result = self.ollama_queue.submit(_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 44, in submit
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 503: ระบบไม่สามารถประมวลผลได้ภายในเวลาที่กำหนด
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 32, in ask_question
+    logger.error(f"Router error: {e}")
+    ^^^^^^^^^^^^
+AttributeError: module 'fastapi.logger' has no attribute 'error'
+2026-01-09 11:38:24,772 | ERROR | rag | Ollama error: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300)
+2026-01-09 11:39:36,761 | INFO | rag | Ollama worker processing request
+2026-01-09 11:42:46,773 | INFO | uvicorn.access | 10.208.2.60:55495 - "POST /rag/ask HTTP/1.1" 500
+2026-01-09 11:42:46,773 | ERROR | uvicorn.error | Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 42, in submit
+    return result_q.get(timeout=190)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 18, in ask_question
+    answer = rag_service.ask_question(request.question)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 123, in ask_question
+    answer = self._call_ollama(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 164, in _call_ollama
+    result = self.ollama_queue.submit(_request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\services\rag_service.py", line 44, in submit
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 503: ระบบไม่สามารถประมวลผลได้ภายในเวลาที่กำหนด
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\adminpak12\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RPA_API\rpa_Doc\src\api\controllers\rag_router.py", line 32, in ask_question
+    logger.error(f"Router error: {e}")
+    ^^^^^^^^^^^^
+AttributeError: module 'fastapi.logger' has no attribute 'error'
+2026-01-09 11:44:36,769 | ERROR | rag | Ollama error: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300)
+2026-01-09 11:54:59,176 | INFO | uvicorn.error | Shutting down
+2026-01-09 11:54:59,285 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 11:54:59,285 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 11:54:59,285 | INFO | uvicorn.error | Finished server process [8956]
+2026-01-09 11:55:12,006 | INFO | uvicorn.error | Started server process [208]
+2026-01-09 11:55:12,006 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 11:55:12,007 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 11:55:12,007 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 11:55:56,627 | INFO | uvicorn.error | Shutting down
+2026-01-09 11:55:56,730 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 11:55:56,731 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 11:55:56,733 | INFO | uvicorn.error | Finished server process [208]
+2026-01-09 11:56:12,723 | INFO | uvicorn.error | Started server process [8476]
+2026-01-09 11:56:12,723 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 11:56:12,723 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 11:56:12,723 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 11:56:21,134 | INFO | rag | Ollama worker processing request
+2026-01-09 11:59:49,479 | INFO | uvicorn.access | 10.208.2.60:56060 - "POST /rag/ask HTTP/1.1" 503
+2026-01-09 12:01:21,259 | ERROR | rag | Ollama error: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=300)
+2026-01-09 12:10:58,044 | INFO | uvicorn.error | Shutting down
+2026-01-09 12:10:58,146 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:10:58,146 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:10:58,146 | INFO | uvicorn.error | Finished server process [8476]
+2026-01-09 12:11:13,508 | INFO | uvicorn.error | Started server process [5780]
+2026-01-09 12:11:13,508 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:11:13,508 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:11:13,508 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 12:11:23,484 | INFO | uvicorn.error | Shutting down
+2026-01-09 12:11:23,593 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:11:23,593 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:11:23,593 | INFO | uvicorn.error | Finished server process [5780]
+2026-01-09 12:11:32,965 | INFO | uvicorn.error | Started server process [5208]
+2026-01-09 12:11:32,965 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:11:32,966 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:11:32,967 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 12:12:13,911 | INFO | uvicorn.access | 10.208.2.60:51876 - "POST /rag/ask HTTP/1.1" 200
+2026-01-09 12:14:11,385 | INFO | uvicorn.error | Shutting down
+2026-01-09 12:14:11,494 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:14:11,494 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:14:11,494 | INFO | uvicorn.error | Finished server process [5208]
+2026-01-09 12:14:14,098 | INFO | uvicorn.error | Started server process [7920]
+2026-01-09 12:14:14,098 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:14:14,098 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:14:14,098 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 12:17:53,092 | INFO | uvicorn.access | 10.208.2.60:52025 - "POST /rag/ask HTTP/1.1" 503
+2026-01-09 12:18:25,785 | ERROR | rag | Worker Error: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=240)
+2026-01-09 12:27:19,063 | INFO | uvicorn.error | Started server process [1996]
+2026-01-09 12:27:19,063 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:27:19,063 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:27:19,063 | ERROR | uvicorn.error | [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2026-01-09 12:27:19,063 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:27:19,063 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:27:44,472 | INFO | uvicorn.error | Started server process [9732]
+2026-01-09 12:27:44,472 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:27:44,472 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:27:44,473 | ERROR | uvicorn.error | [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2026-01-09 12:27:44,473 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:27:44,474 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:29:38,455 | INFO | uvicorn.error | Started server process [8572]
+2026-01-09 12:29:38,455 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:29:38,455 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:29:38,455 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 12:31:21,536 | INFO | uvicorn.access | 10.208.2.60:52789 - "POST /rag/ask HTTP/1.1" 200
+2026-01-09 12:47:35,202 | INFO | uvicorn.error | Shutting down
+2026-01-09 12:47:35,311 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-09 12:47:35,311 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-09 12:47:35,311 | INFO | uvicorn.error | Finished server process [8572]
+2026-01-09 12:47:50,793 | INFO | uvicorn.error | Started server process [7188]
+2026-01-09 12:47:50,793 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-09 12:47:50,793 | INFO | uvicorn.error | Application startup complete.
+2026-01-09 12:47:50,793 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-09 12:49:03,488 | INFO | uvicorn.access | 10.208.2.60:53549 - "POST /rag/ask HTTP/1.1" 200
+2026-01-09 14:01:52,818 | INFO | uvicorn.access | 10.208.2.60:50581 - "POST /rag/ask HTTP/1.1" 200
+2026-01-09 14:14:31,817 | INFO | uvicorn.access | 10.208.2.60:51175 - "POST /rag/ask HTTP/1.1" 200
+2026-01-09 15:18:10,969 | INFO | uvicorn.access | 10.208.1.207:50529 - "POST /rag/ask HTTP/1.1" 200
