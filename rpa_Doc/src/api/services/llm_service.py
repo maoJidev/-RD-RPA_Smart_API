@@ -25,7 +25,7 @@ class LLMService:
                     "options": {
                         "temperature": 0.0, # ลดความเพ้อเจ้อ (Creativity) เพื่อให้แม่นยำ
                         "num_ctx": 2048,    # 3b รับได้สบาย และพอดีกับ context
-                        "num_predict": 400, # จำกัดความยาวคำตอบไม่ให้เวิ่นเว้อ
+                        "num_predict": 1000, # เพิ่มความยาวคำตอบเพื่อรองรับภาษาไทยที่ซับซ้อน
                         "top_k": 20,
                         "top_p": 0.9,
                         "repeat_penalty": 1.1

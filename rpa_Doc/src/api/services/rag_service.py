@@ -33,6 +33,12 @@ class RAGService:
             # 4. LLM Call
             answer = self.llm.call_ollama(prompt)
             
+            # 5. Quality Control: If AI says "not found", clear refs to avoid confusion
+            if not answer or any(x in answer for x in ["ไม่พบข้อมูล", "ขออภัย", "ไม่มีข้อมูล"]):
+                detailed_refs = []
+                if not answer:
+                    answer = "ขออภัย ระบบไม่สามารถสรุปคำตอบจากข้อมูลที่มีได้ กรุณาลองใหม่หรือปรับคำถามให้ชัดเจนขึ้น"
+            
             return self._finalize(start_time, question, domain, detailed_refs, answer, "success", "document")
 
         except HTTPException: 

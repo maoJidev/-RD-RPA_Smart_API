@@ -7,7 +7,7 @@ class RetrievalService:
     def __init__(self):
         self.doc_repo = DocumentRepository()
         self.top_k_docs = 2 # เพิ่มเป็น 2 เพื่อให้ครอบคลุมขึ้น
-        self.min_similarity = 0.05
+        self.min_similarity = 0.15 # ปรับเกณฑ์ขั้นต่ำให้สูงขึ้นเพื่อลด Noise
         self.window_size = 600 # ขยายหน้าต่างข้อมูลเป็น 600 ตัวอักษร
         self.overlap = 100 # เพิ่ม overlap เป็น 100
 
