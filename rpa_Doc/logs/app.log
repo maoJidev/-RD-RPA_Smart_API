@@ -363,3 +363,12 @@ AttributeError: module 'fastapi.logger' has no attribute 'error'
 2026-01-09 14:01:52,818 | INFO | uvicorn.access | 10.208.2.60:50581 - "POST /rag/ask HTTP/1.1" 200
 2026-01-09 14:14:31,817 | INFO | uvicorn.access | 10.208.2.60:51175 - "POST /rag/ask HTTP/1.1" 200
 2026-01-09 15:18:10,969 | INFO | uvicorn.access | 10.208.1.207:50529 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 10:05:25,797 | INFO | uvicorn.error | Started server process [18388]
+2026-01-12 10:05:25,798 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 10:05:25,799 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 10:05:25,799 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 10:05:50,565 | INFO | uvicorn.access | 127.0.0.1:55262 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 10:05:58,780 | INFO | uvicorn.error | Shutting down
+2026-01-12 10:05:58,889 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 10:05:58,889 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 10:05:58,889 | INFO | uvicorn.error | Finished server process [18388]

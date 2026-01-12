@@ -5,8 +5,6 @@ from robocorp.tasks import task
 from robocorp.browser import browser
 
 from src.config.settings import FILE_PATHS
-from src.utils.document_filter_by_title import filter_documents_by_keywords
-from src.utils.document_summarizer import summarize_documents
 
 from src.scrapers.year_collector import collect_years
 from src.scrapers.month_collector import collect_months

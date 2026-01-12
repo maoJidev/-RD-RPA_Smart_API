@@ -34,7 +34,7 @@ SCRAPER_CONFIG = {
 OLLAMA_BASE_URL = "http://127.0.0.1:11434"
 
 RAG_CONFIG = {
-    "model": "qwen2.5:3b",  # เปลี่ยนเป็นรุ่น 3b เพื่อทำเวลาให้ได้ 1-2 นาที (7b ช้าเกินไปสำหรับ CPU)
+    "model": "qwen3:8b",  # เปลี่ยนเป็นรุ่น 3b เพื่อทำเวลาให้ได้ 1-2 นาที (7b ช้าเกินไปสำหรับ CPU)
     "top_k": 2,
     "min_similarity": 0.05,
     "strict_mode": True,
