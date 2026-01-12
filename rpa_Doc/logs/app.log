@@ -372,3 +372,92 @@ AttributeError: module 'fastapi.logger' has no attribute 'error'
 2026-01-12 10:05:58,889 | INFO | uvicorn.error | Waiting for application shutdown.
 2026-01-12 10:05:58,889 | INFO | uvicorn.error | Application shutdown complete.
 2026-01-12 10:05:58,889 | INFO | uvicorn.error | Finished server process [18388]
+2026-01-12 10:49:18,227 | INFO | uvicorn.error | Started server process [21484]
+2026-01-12 10:49:18,227 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 10:49:18,228 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 10:49:18,228 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 10:49:27,167 | INFO | uvicorn.access | 127.0.0.1:63787 - "GET /docs HTTP/1.1" 200
+2026-01-12 10:49:46,664 | INFO | uvicorn.error | Started server process [20160]
+2026-01-12 10:49:46,664 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 10:49:46,665 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 10:49:46,665 | ERROR | uvicorn.error | [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2026-01-12 10:49:46,666 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 10:49:46,666 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 10:50:11,694 | INFO | uvicorn.access | 127.0.0.1:63818 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 11:03:20,747 | INFO | uvicorn.access | 127.0.0.1:57274 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 11:03:44,435 | INFO | uvicorn.access | 127.0.0.1:57299 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 11:04:02,858 | INFO | uvicorn.access | 127.0.0.1:57310 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 11:04:21,698 | INFO | uvicorn.access | 127.0.0.1:57322 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:21:48,880 | INFO | uvicorn.access | 127.0.0.1:60016 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:22:16,250 | INFO | uvicorn.access | 127.0.0.1:60052 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:22:34,559 | INFO | uvicorn.error | Shutting down
+2026-01-12 13:22:34,669 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 13:22:34,670 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 13:22:34,670 | INFO | uvicorn.error | Finished server process [21484]
+2026-01-12 13:22:37,985 | INFO | uvicorn.error | Started server process [28376]
+2026-01-12 13:22:37,985 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:22:37,985 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:22:37,986 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:22:52,324 | INFO | uvicorn.access | 127.0.0.1:62956 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:23:33,398 | INFO | uvicorn.access | 127.0.0.1:61643 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:23:45,059 | INFO | uvicorn.access | 127.0.0.1:61666 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:24:15,648 | INFO | uvicorn.access | 127.0.0.1:61702 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:24:38,058 | INFO | uvicorn.access | 127.0.0.1:51778 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:26:35,950 | INFO | uvicorn.error | Started server process [11692]
+2026-01-12 13:26:35,951 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:26:35,951 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:26:35,951 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:26:50,156 | INFO | uvicorn.access | 127.0.0.1:61026 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:27:14,697 | INFO | uvicorn.error | Shutting down
+2026-01-12 13:27:14,804 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 13:27:14,805 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 13:27:14,805 | INFO | uvicorn.error | Finished server process [11692]
+2026-01-12 13:27:17,800 | INFO | uvicorn.error | Started server process [21320]
+2026-01-12 13:27:17,801 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:27:17,801 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:27:17,802 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:27:31,591 | INFO | uvicorn.access | 127.0.0.1:61074 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:27:52,960 | INFO | uvicorn.error | Shutting down
+2026-01-12 13:27:53,070 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 13:27:53,071 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 13:27:53,071 | INFO | uvicorn.error | Finished server process [21320]
+2026-01-12 13:27:56,018 | INFO | uvicorn.error | Started server process [3276]
+2026-01-12 13:27:56,018 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:27:56,019 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:27:56,020 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:28:09,874 | INFO | uvicorn.access | 127.0.0.1:61088 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:29:12,131 | INFO | uvicorn.access | 127.0.0.1:61112 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:29:25,877 | INFO | uvicorn.error | Started server process [26604]
+2026-01-12 13:29:25,877 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:29:25,879 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:29:25,879 | ERROR | uvicorn.error | [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2026-01-12 13:29:25,883 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 13:29:25,883 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 13:29:40,706 | INFO | uvicorn.access | 127.0.0.1:61142 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:30:05,217 | INFO | uvicorn.error | Started server process [24912]
+2026-01-12 13:30:05,218 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:30:05,218 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:30:05,219 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:30:22,288 | INFO | uvicorn.access | 127.0.0.1:61173 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:30:47,251 | INFO | uvicorn.error | Started server process [9940]
+2026-01-12 13:30:47,252 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:30:47,252 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:30:47,252 | ERROR | uvicorn.error | [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): only one usage of each socket address (protocol/network address/port) is normally permitted
+2026-01-12 13:30:47,253 | INFO | uvicorn.error | Waiting for application shutdown.
+2026-01-12 13:30:47,253 | INFO | uvicorn.error | Application shutdown complete.
+2026-01-12 13:31:02,117 | INFO | uvicorn.access | 127.0.0.1:61190 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:31:12,711 | INFO | uvicorn.error | Started server process [29032]
+2026-01-12 13:31:12,712 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:31:12,712 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:31:12,712 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:31:29,596 | INFO | uvicorn.access | 127.0.0.1:61228 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:32:14,588 | INFO | uvicorn.error | Started server process [13716]
+2026-01-12 13:32:14,589 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:32:14,589 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:32:14,590 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:32:31,474 | INFO | uvicorn.access | 127.0.0.1:59790 - "POST /rag/ask HTTP/1.1" 200
+2026-01-12 13:33:23,126 | INFO | uvicorn.error | Started server process [35468]
+2026-01-12 13:33:23,126 | INFO | uvicorn.error | Waiting for application startup.
+2026-01-12 13:33:23,126 | INFO | uvicorn.error | Application startup complete.
+2026-01-12 13:33:23,128 | INFO | uvicorn.error | Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-01-12 13:33:40,486 | INFO | uvicorn.access | 127.0.0.1:59889 - "POST /rag/ask HTTP/1.1" 200

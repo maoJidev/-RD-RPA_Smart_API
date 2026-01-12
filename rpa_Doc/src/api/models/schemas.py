@@ -7,6 +7,7 @@ class QuestionRequest(BaseModel):
 
 class ReferenceDetail(BaseModel):
     title: str
+    doc_id: Optional[str] = None
     score: float
     is_primary: bool = False
 
